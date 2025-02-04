@@ -38,7 +38,7 @@ public class ProgramUtama {
     }
     public static void pertambahan() {
         menghapusOutput();
-        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+        System.out.println("-----------------------------------------------------");
         System.out.println("\t/Pertambahan/\n");
         System.out.print("Masukkan angka: ");
         int A = scanner.nextInt();
@@ -46,7 +46,7 @@ public class ProgramUtama {
         int B = scanner.nextInt();
         int hasil = A + B ;
         System.out.println("Hasil: " + hasil);
-        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+        System.out.println("-----------------------------------------------------");
         pilihankedua();
         menghapusOutput();
     }
