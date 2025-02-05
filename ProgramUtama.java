@@ -1,83 +1,163 @@
 import java.util.Scanner;
 
 public class ProgramUtama {
-
-    // objek Scanner untuk membaca input dari konsol
     private static Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args) {
         menghapusOutput();
         pilihanUtama();
     }
     public static void pilihanUtama() {
-        menghapusOutput();
-        System.out.println("|Penghitung|\n");
-        System.out.println("1.Pertambahan");
-        System.out.println("0.Keluar");
-        System.out.print("\nPilih: ");
+        System.out.println("\t\t\nMain Menu\n");
+        System.out.println("1.Calculation");
+        System.out.println("2.Coming soon");
+        System.out.println("0.Exit");
+        System.out.print("\nChoose: ");
+        if (scanner.hasNextInt()) {
+            int inputUser = scanner.nextInt();
+            scanner.nextLine();
+            if (inputUser == 1) {
+                menghapusOutput();
+                menuPenghitung();
+            }else if (inputUser == 0) {
+                System.exit(0);
+            }else {
+                menghapusOutput();
+                System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                System.out.println("\t\tInvalid Input !");
+                System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                pilihanUtama();
+                menghapusOutput();
+            }
+        }else {
+            scanner.nextLine();
+            menghapusOutput();
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            System.out.println("\t\tInvalid Input !");
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            pilihanUtama();
+            menghapusOutput();
+        }
+    }
+    public static void menuPenghitung() {
+        System.out.println("\n|Calculation|\n");
+        System.out.println("1.Increase");
+        System.out.println("2.Subtraction");
+        System.out.println("3.Division");
+        System.out.println("0.Back to main menu");
+        System.out.print("\nChoose: ");
         if (scanner.hasNextInt()) {
             int inputUser = scanner.nextInt();
             scanner.nextLine();
             if (inputUser == 1) {
                 pertambahan();
+            }else if (inputUser == 2) {
+                pengurangan();
+            }else if (inputUser == 3) {
+                pembagian();
             }else if (inputUser == 0) {
-                System.exit(0);
-            }else {
-                menghapusOutput();
-                System.out.println("\tInvalid Input !");
                 menghapusOutput();
                 pilihanUtama();
+            }else {
+                menghapusOutput();
+                System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                System.out.println("\t\tInvalid Input !");
+                System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                menuPenghitung();
+                menghapusOutput();
             }
         }else {
             scanner.nextLine();
             menghapusOutput();
-            System.out.println("\tInvalid Input !");
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            System.out.println("\t\tInvalid Input !");
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            menuPenghitung();
             menghapusOutput();
-            pilihanUtama();
         }
     }
     public static void pertambahan() {
         menghapusOutput();
         System.out.println("-----------------------------------------------------");
-        System.out.println("\t/Pertambahan/\n");
-        System.out.print("Masukkan angka: ");
+        System.out.println("\t\t/Increase/\n");
+        System.out.print("Enter a number: ");
         int A = scanner.nextInt();
-        System.out.print("Masukkan angka: ");
+        System.out.print("Enter a number: ");
         int B = scanner.nextInt();
         int hasil = A + B ;
-        System.out.println("Hasil: " + hasil);
+        System.out.println("Result: " + hasil);
+        System.out.println("-----------------------------------------------------\n");
+        pilihankedua();
+        menghapusOutput();
+    }
+    public static void pengurangan() {
+        menghapusOutput();
         System.out.println("-----------------------------------------------------");
+        System.out.println("\t\t/Subtraction/\n");
+        System.out.print("Enter a number: ");
+        int A = scanner.nextInt();
+        System.out.print("Enter a number: ");
+        int B = scanner.nextInt();
+        int hasil = A - B ;
+        System.out.println("Result: " + hasil);
+        System.out.println("-----------------------------------------------------\n");
+        pilihankedua();
+        menghapusOutput();
+    }
+    public static void pembagian() {
+        menghapusOutput();
+        System.out.println("-----------------------------------------------------");
+        System.out.println("\t\t/Division/\n");
+        System.out.print("Enter a number: ");
+        int A = scanner.nextInt();
+        System.out.print("Enter a number: ");
+        int B = scanner.nextInt();
+        int hasil = A / B ;
+        System.out.println("Result: " + hasil);
+        System.out.println("-----------------------------------------------------\n");
         pilihankedua();
         menghapusOutput();
     }
     public static void pilihankedua() {
-        System.out.println("1.Kembali");
-        System.out.println("0.Keluar");
-        System.out.print("Pilih: ");
+        System.out.println("\n-----------------------------------------------------");
+        System.out.println("\t\t[Choice]");
+        System.out.println("\n1.Enter to Increase");
+        System.out.println("2.Enter to Subtraction");
+        System.out.println("3.Enter to Division");
+        System.out.println("0.Back to main menu\n");
+        System.out.println("-----------------------------------------------------");
+        System.out.print("\nChoose: ");
         if (scanner.hasNextInt()) {
             int inputUser = scanner.nextInt();
             scanner.nextLine();
             if (inputUser == 1) {
                 pertambahan();
+            }else if (inputUser == 2) {
+                pengurangan();
+            }else if (inputUser == 3) {
+                pembagian();
             }else if (inputUser == 0) {
-                pilihanUtama();
+                menghapusOutput();
+                menuPenghitung();
             }else {
                 menghapusOutput();
-                System.out.println("\tInvalid Input !");
-                menghapusOutput();
+                System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                System.out.println("\t\tInvalid Input !");
+                System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                 pilihankedua();
+                menghapusOutput();
             }
         }else {
             scanner.nextLine();
             menghapusOutput();
-            System.out.println("\tInvalid Input !");
-            menghapusOutput();
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            System.out.println("\t\tInvalid Input !");
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             pilihankedua();
+            menghapusOutput();
         }
     }
     public static void menghapusOutput() {
         try {
-            // memeriksa nama sistem operasi yang sedang dijalankan oleh program, mendapatkan nama sistem operasi dari properti sistem.
             if (System.getProperty("os.name").contains("Windows")) {
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
             } else {
@@ -91,17 +171,4 @@ public class ProgramUtama {
 
 
 
-// class ProgramKedua { <= ini adalah class 
-// public static void programKedua() {  <= ini adalah function
-//         System.out.println("Ini adalah Program Kedua."); <= ini section print
-//     }
-// }
 
-// // input bertype text
-// System.out.print("Masukkan nama anda: ");
-// String nama = scanner.nextLine();
-// // input bertype integer
-// System.out.print("Masukkan umur anda: ");
-// int umur = scanner.nextInt();
-// // print output nama dan umur
-// System.out.println("Nama kamu " + nama + ", Umur kamu " + umur + " Tahun.");
