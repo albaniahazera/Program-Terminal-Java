@@ -1,4 +1,4 @@
-﻿\t\tProgram-Terminal-Java
+﻿# Program-Terminal-Java
 
 # To use this file 
 # 1.Install jdk-8 in linux debian and ubuntu
