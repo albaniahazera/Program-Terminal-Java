@@ -11,7 +11,11 @@ public class ProgramUtama {
         System.out.println("==========================================================");
         System.out.println("|Main Menu|\n");
         System.out.println("1.Calculation");
+<<<<<<< HEAD
+        System.out.println("2.Cek os info");
+=======
         System.out.println("2.Coming soon");
+>>>>>>> 51da55c9d59ecfa55cdf48d98bfbbc414fdd0250
         System.out.println("0.Exit");
         System.out.println("==========================================================");
         System.out.println("\nChoose a number !");
@@ -22,6 +26,12 @@ public class ProgramUtama {
             if (inputUser == 1) {
                 menghapusOutput();
                 menuPenghitung();
+<<<<<<< HEAD
+            }else if (inputUser == 2) {
+                menghapusOutput();
+                cekOS();
+=======
+>>>>>>> 51da55c9d59ecfa55cdf48d98bfbbc414fdd0250
             }else if (inputUser == 0) {
                 System.exit(0);
             }else {
@@ -95,7 +105,11 @@ public class ProgramUtama {
     }
     public static void pertambahan() {
         try {
+<<<<<<< HEAD
+            System.out.println("----------------------------------------------------------");
+=======
             System.out.println("-----------------------------------------------------");
+>>>>>>> 51da55c9d59ecfa55cdf48d98bfbbc414fdd0250
             System.out.println("\t\t/Increase/\n");
             System.out.print("Enter a number: ");
             double A = scanner.nextInt();
@@ -104,7 +118,11 @@ public class ProgramUtama {
             double hasil = 0;
             hasil = A + B ;
             System.out.println("Result: " + hasil);
+<<<<<<< HEAD
+            System.out.println("----------------------------------------------------------");
+=======
             System.out.println("-----------------------------------------------------\n");
+>>>>>>> 51da55c9d59ecfa55cdf48d98bfbbc414fdd0250
             pilihankedua();
             menghapusOutput();
         }catch (InputMismatchException e) {
@@ -116,7 +134,11 @@ public class ProgramUtama {
     }
     public static void pengurangan() {
         try {
+<<<<<<< HEAD
+            System.out.println("----------------------------------------------------------");
+=======
             System.out.println("-----------------------------------------------------");
+>>>>>>> 51da55c9d59ecfa55cdf48d98bfbbc414fdd0250
             System.out.println("\t\t/Subtraction/\n");
             System.out.print("Enter a number: ");
             double A = scanner.nextInt();
@@ -125,7 +147,11 @@ public class ProgramUtama {
             double hasil = 0;
             hasil = A - B ;
             System.out.println("Result: " + hasil);
+<<<<<<< HEAD
+            System.out.println("----------------------------------------------------------");
+=======
             System.out.println("-----------------------------------------------------\n");
+>>>>>>> 51da55c9d59ecfa55cdf48d98bfbbc414fdd0250
             pilihankedua();
             menghapusOutput();
         }catch (InputMismatchException e) {
@@ -137,7 +163,11 @@ public class ProgramUtama {
     }
     public static void pembagian() {
         try {
+<<<<<<< HEAD
+            System.out.println("----------------------------------------------------------");
+=======
             System.out.println("-----------------------------------------------------");
+>>>>>>> 51da55c9d59ecfa55cdf48d98bfbbc414fdd0250
             System.out.println("\t\t/Division/\n");
             System.out.print("Enter a number: ");
             double A = scanner.nextInt();
@@ -146,7 +176,11 @@ public class ProgramUtama {
             double hasil = 0;
             hasil = A / B ;
             System.out.println("Result: " + hasil);
+<<<<<<< HEAD
+            System.out.println("----------------------------------------------------------");
+=======
             System.out.println("-----------------------------------------------------\n");
+>>>>>>> 51da55c9d59ecfa55cdf48d98bfbbc414fdd0250
             pilihankedua();
             menghapusOutput();
         }catch (InputMismatchException e) {
@@ -158,7 +192,11 @@ public class ProgramUtama {
     }
     public static void perkalian() {
         try {
+<<<<<<< HEAD
+            System.out.println("----------------------------------------------------------");
+=======
             System.out.println("-----------------------------------------------------");
+>>>>>>> 51da55c9d59ecfa55cdf48d98bfbbc414fdd0250
             System.out.println("\t\t/Multiplication/\n");
             System.out.print("Enter a number: ");
             double A = scanner.nextInt();
@@ -167,7 +205,11 @@ public class ProgramUtama {
             double hasil = 0;
             hasil = A * B ;
             System.out.println("Result: " + hasil);
+<<<<<<< HEAD
+            System.out.println("----------------------------------------------------------");
+=======
             System.out.println("-----------------------------------------------------\n");
+>>>>>>> 51da55c9d59ecfa55cdf48d98bfbbc414fdd0250
             pilihankedua();
             menghapusOutput();
         }catch (InputMismatchException e) {
@@ -179,6 +221,17 @@ public class ProgramUtama {
     }
     public static void tabelPerkalian() {
         try {
+<<<<<<< HEAD
+            System.out.println("----------------------------------------------------------");
+            System.out.println("\t\t/Multiplication table/\n");
+            System.out.print("Enter a number: ");
+            int num = scanner.nextInt();
+            System.out.println("\nResult !\n");
+            for (int i = 1; i <= 12; i++) {
+                System.out.println(num + " x " + i + " = " + (num * i));
+            }
+            System.out.println("----------------------------------------------------------");
+=======
             System.out.println("-----------------------------------------------------");
             System.out.println("\t\t/Multiplication table/\n");
             System.out.print("Enter a number: ");
@@ -187,6 +240,7 @@ public class ProgramUtama {
                 System.out.println(num + " x " + i + " = " + (num * i));
             }
             System.out.println("-----------------------------------------------------\n");
+>>>>>>> 51da55c9d59ecfa55cdf48d98bfbbc414fdd0250
             pilihankedua();
             menghapusOutput();
         }catch (InputMismatchException e) {
@@ -196,8 +250,62 @@ public class ProgramUtama {
             menuPenghitung();
         }
     }
+<<<<<<< HEAD
+    public static void cekOS() {
+        String osName = System.getProperty("os.name");
+        String osVersion = System.getProperty("os.version");
+        String osArch = System.getProperty("os.arch");
+        String userName = System.getProperty("user.name");
+        String userHome = System.getProperty("user.home");
+        String javaVersion = System.getProperty("java.version");
+        String javaVendor = System.getProperty("java.vendor");
+
+        System.out.println("==========================================================");
+        System.out.println("\t\t|OS INFO|\n");
+        System.out.println("OS Name: " + osName);
+        System.out.println("OS Version: " + osVersion);
+        System.out.println("OS Architecture: " + osArch);
+        System.out.println("==========================================================\n");
+        System.out.println("\n==========================================================");
+        System.out.println("\t\t|User Info|\n");
+        System.out.println("User Name: " + userName);
+        System.out.println("Home User: " + userHome);
+        System.out.println("==========================================================\n");
+        System.out.println("\n==========================================================");
+        System.out.println("\t\t|Java Info|\n");
+        System.out.println("Java Version: " + javaVersion);
+        System.out.println("Java Vendor: " + javaVendor);
+        System.out.println("==========================================================\n");
+        System.out.println("\nPress 0 to back at main menu !");
+        System.out.print("===> ");
+        if (scanner.hasNextInt()) {
+            int inputUser = scanner.nextInt();
+            scanner.nextLine();
+            if (inputUser == 0) {
+                menghapusOutput();
+                pilihanUtama();
+            }else {
+                menghapusOutput();
+                System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                System.out.println("\t\tInvalid Input !");
+                System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                cekOS();
+            }
+        }else {
+            scanner.nextLine();
+            menghapusOutput();
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            System.out.println("\t\tInvalid Input !");
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            cekOS();
+        }
+    }
+    public static void pilihankedua() {
+        System.out.println("----------------------------------------------------------");
+=======
     public static void pilihankedua() {
         System.out.println("\n-----------------------------------------------------");
+>>>>>>> 51da55c9d59ecfa55cdf48d98bfbbc414fdd0250
         System.out.println("\t\t[Choice]");
         System.out.println("\n1.Enter to Increase");
         System.out.println("2.Enter to Subtraction");
@@ -205,7 +313,11 @@ public class ProgramUtama {
         System.out.println("4.Enter to Multiplication");
         System.out.println("5.Enter to Multiplication Table");
         System.out.println("0.Back to main menu\n");
+<<<<<<< HEAD
+        System.out.println("----------------------------------------------------------");
+=======
         System.out.println("-----------------------------------------------------");
+>>>>>>> 51da55c9d59ecfa55cdf48d98bfbbc414fdd0250
         System.out.println("\nChoose a number !");
         System.out.print("===> ");
         if (scanner.hasNextInt()) {
